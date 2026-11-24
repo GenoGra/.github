@@ -1,5 +1,5 @@
 name: Bug report
-description: "A bug found on develop, staging or a customer node. Procedure: https://github.com/GenoGra/genogra-onprem/blob/develop/docs/runbooks/bugfix-procedure.md"
+description: "A bug found on develop, staging or a customer node. Procedure: https://github.com/GenoGra/genogra-ci/blob/develop/docs/engineering/bugfix-procedure.md"
 labels: [bug]
 body:
   - type: textarea
