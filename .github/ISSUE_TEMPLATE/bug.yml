@@ -1,0 +1,53 @@
+name: Bug report
+description: "A bug found on develop, staging or a customer node. Procedure: https://github.com/GenoGra/genogra-onprem/blob/develop/docs/runbooks/bugfix-procedure.md"
+labels: [bug]
+body:
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. ...
+        2. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result
+      description: Error messages, logs or screenshots.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment and version
+      description: Where the bug was seen and which version runs there.
+      placeholder: staging02, develop of 2026-11-24
+    validations:
+      required: true
+  - type: dropdown
+    id: in-production
+    attributes:
+      label: In production
+      description: Filled by the developer after the production check (step 3 of the runbook).
+      options:
+        - Not checked yet
+        - "Yes"
+        - "No"
+        - Not applicable (configuration, data or environment)
+      default: 0
+    validations:
+      required: true
+  - type: input
+    id: culprit
+    attributes:
+      label: Introduced by
+      description: Filled by the developer. Repo and commit that introduced the bug, and the production version checked.
+      placeholder: platform-server@<sha>, production 1.3.1
